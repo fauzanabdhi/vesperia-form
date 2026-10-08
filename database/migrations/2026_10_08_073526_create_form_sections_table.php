@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('form_sections', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('form_id')
+                ->constrained()
+                ->cascadeOnDelete();
+
+            $table->string('external_id')->unique();
+            $table->string('name');
+            $table->unsignedInteger('position');
+            $table->json('definition_json');
             $table->timestamps();
+
+            $table->index(['form_id', 'position']);
         });
     }
 

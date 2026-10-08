@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('field_options', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('field_id')
+                ->constrained('form_fields')
+                ->cascadeOnDelete();
+
+            $table->string('external_id')->unique();
+            $table->string('label');
+            $table->string('value')->nullable();
+            $table->unsignedInteger('position');
+            $table->json('definition_json');
             $table->timestamps();
+
+            $table->index(['field_id', 'position']);
         });
     }
 

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
+            $table->string('external_id')->unique();
+            $table->string('name');
+            $table->json('definition_json');
+            $table->string('source_checksum', 64)->unique();
+            $table->timestamp('imported_at')->nullable();
             $table->timestamps();
         });
     }
