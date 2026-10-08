@@ -15,12 +15,12 @@ class FieldOption extends Model
     }
 
     protected $fillable = [
-    'field_id',
-    'external_id',
-    'label',
-    'value',
-    'position',
-    'definition_json',
+        'field_id',
+        'external_id',
+        'label',
+        'value',
+        'position',
+        'definition_json',
     ];
 
     public function field(): BelongsTo

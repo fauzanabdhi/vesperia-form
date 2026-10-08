@@ -16,11 +16,11 @@ class FormSection extends Model
     }
 
     protected $fillable = [
-    'form_id',
-    'external_id',
-    'name',
-    'position',
-    'definition_json',
+        'form_id',
+        'external_id',
+        'name',
+        'position',
+        'definition_json',
     ];
 
     public function form(): BelongsTo

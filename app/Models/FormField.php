@@ -17,15 +17,15 @@ class FormField extends Model
     }
 
     protected $fillable = [
-    'section_id',
-    'external_id',
-    'label',
-    'type',
-    'sub_type',
-    'description',
-    'is_orm_only',
-    'position',
-    'definition_json',
+        'section_id',
+        'external_id',
+        'label',
+        'type',
+        'sub_type',
+        'description',
+        'is_orm_only',
+        'position',
+        'definition_json',
     ];
 
     public function section(): BelongsTo

@@ -14,12 +14,13 @@ class Form extends Model
             'imported_at' => 'datetime',
         ];
     }
+
     protected $fillable = [
-    'external_id',
-    'name',
-    'definition_json',
-    'source_checksum',
-    'imported_at',
+        'external_id',
+        'name',
+        'definition_json',
+        'source_checksum',
+        'imported_at',
     ];
 
     public function sections(): HasMany

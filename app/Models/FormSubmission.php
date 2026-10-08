@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class FormSubmission extends Model
 {
-   protected function casts(): array
+    protected function casts(): array
     {
         return [
             'payload' => 'array',
@@ -16,9 +16,9 @@ class FormSubmission extends Model
     }
 
     protected $fillable = [
-    'form_id',
-    'payload',
-    'submitted_at',
+        'form_id',
+        'payload',
+        'submitted_at',
     ];
 
     public function form(): BelongsTo
